@@ -88,6 +88,7 @@
 
 .nav_content > li {
     padding: 0 1.4rem;
+    transition: transform ease 0.6s;
 }
 
 .nav_content > li > a {
@@ -95,10 +96,9 @@
     text-decoration: none;
 }
 
-.nav_content a:hover {
+.nav_content > li:hover {
     cursor: pointer;
     transform: scale(120%);
-    transition: all ease 0.3s;
 }
 
 .nav-search {
@@ -136,7 +136,7 @@
     min-width: 20rem;
     top: calc(100% - 2rem);
     animation: ease swipeRight 0.5s;
-    box-shadow: 1rem 1rem 2rem rgba(204, 204, 204, 0.877);
+    box-shadow: 1rem 1rem 10rem rgba(172, 172, 172, 0.685);
 }
 
 .subnav a {
@@ -598,6 +598,10 @@ th, td {
     font-weight: 600;
     padding: 0.8rem;
     display: block;
+    transition: transform ease 0.5s;
+}
+.blog__new-btn a:hover {
+    transform: scale(140%);
 }
 
 .blog__list {
@@ -612,6 +616,12 @@ th, td {
     width: calc(100% / 3 - 4rem);
     height: 24.5rem;
     box-shadow: 1rem 1rem 2rem #ccc;
+    transition: transform ease 0.5s
+}
+
+.blog__list-item:hover {
+    transform: translateY(-0.6rem);
+    cursor: pointer;
 }
 
 .blog__list-item img,
@@ -646,6 +656,12 @@ th, td {
 .news__list-item {
     width: calc(25% - 3.9rem);
     box-shadow: 1rem 1rem 2rem #ccc;
+    transition: transform ease 0.5s;
+}
+
+.news__list-item:hover {
+    cursor: pointer;
+    transform: translateY(-0.7rem);
 }
 
 .new.active {
@@ -715,6 +731,13 @@ th, td {
 
 .contact__map img {
     width: 100%;
+    transition: transform ease 1.5s;
+    padding-top: 1.6rem;
+}
+
+.contact__map img:hover {
+    transform: scale(130%);
+    cursor: pointer;
 }
 
 #introduction-page {
@@ -730,6 +753,12 @@ th, td {
 .introduction-page__img img {
     width: calc(100% / 3 - 3rem);
     box-shadow: 2rem 2rem 4rem rgba(185, 185, 185, 0.753);
+    transition: transform ease 1s;
+}
+
+.introduction-page__img img:hover {
+    transform: scale(105%);
+    cursor: pointer;
 }
 
 .introduction-page__content--content {
@@ -768,11 +797,11 @@ th, td {
 #image img {
     width: calc(100% / 3 - 2.3rem);
     box-shadow: 1rem 1rem 2rem #ccc;
+    transition: transform ease 0.7s;
 }
 
 #image img:hover {
-    transform: scale(110%);
-    transition: all ease 0.5s;
+    transform: scale(105%);
     cursor: pointer;
 }
 
