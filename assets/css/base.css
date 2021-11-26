@@ -7,7 +7,9 @@
 :root {
     --header-height: 5.6rem;
     --white-color: white;
-    --slider-height: 10.8rem;
+    --slider-height-PC-high: 12.8rem;
+    --slider-height-PC: 10.8rem;
+    --slider-height-tablet: 8.8rem;
     --primary-color: rgb(31, 37, 51);
 }
 

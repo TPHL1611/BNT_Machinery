@@ -10,11 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;700;900&family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <title>BNT Machinery</title>
 </head>
 <body>
     <div id="app">
-        <div id="main">
+        <div id="main" onclick="closeNav()">
             <header id="header">
                 <div class="header-social">
                     <a href=""><i class="header_social-icon fab fa-facebook-f"></i></a>
@@ -40,12 +41,14 @@
 
             <nav id="nav">
                 <div class="trapezoid_logo">
+                    <div class="nav-menu"><i class="fas fa-bars" onclick="openNav()"></i></div>
                     <div class="nav-logo">
                         <img src="./assets/img/logo.png" alt="">
                     </div>
                 </div>
                 <div class="nagigation">
                     <ul class="nav_content">
+                        <!-- <i class="nav_content--close fas fa-times onclick='closeNav()'"></i> -->
                         <li><a href="#">Trang chủ</a></li>
                         <li><a href="./pages/Gioi_Thieu.html">Giới thiệu</a></li>
                         <li><a href="./pages/San_Pham.html">Sản phẩm</a>
