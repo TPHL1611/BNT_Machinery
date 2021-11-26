@@ -314,24 +314,29 @@
         flex: 1;
     }
 }
-@media (min-width: 1400px) and (max-width: 1599px) {
+@media screen and (min-width: 1400px) and (max-width: 1599px) {
     .nav_content > li > a {
         font-size: 1.6rem;
     }
 }
 
-@media (min-width: 1024px) and (max-width: 1366px) {
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
     #main {
         width: auto;
         margin-left: auto;
         margin-right: auto;
     }
 
+    .header-social {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     .trapezoid_logo {
         border-width: var(--slider-height-tablet) 0 4.2rem 16.8rem;
     }
 
-    #nav {
+    #nav, .nav-logo {
         height: var(--slider-height-tablet);
     }
 
@@ -342,10 +347,6 @@
         font-size: 2rem;
         color: var(--white-color);
         z-index: 2;
-    }
-
-    .nav-logo {
-        height: var(--slider-height-tablet);
     }
 
     .nav-logo img {
@@ -361,12 +362,12 @@
         top: 6.4rem;
         left: -10rem;
         line-height: 5rem;
-        z-index: 1;
+        z-index: 2;
         background-color: var(--primary-color);
         color: var(--white-color);
         overflow-x: hidden;
         height: 55rem;
-        transition: 0.5s;
+        transition: 0.7s;
         padding: 0 3.2rem;
         width: 0;
     }
@@ -395,6 +396,12 @@
         color: var(--primary-color);
     }
 
+    .subnav {
+        top: 100%;
+        box-shadow: none;
+        right: 0;
+    }
+
     .product_item {
         width: 90%;
         left: 0;
@@ -410,8 +417,16 @@
         left: -17rem;
     }
 
-    #introdution, #policy, #blog, #footer {
+    #introdution, #policy, #blog, #footer, #introduction-page, #video, #news, #contact {
         padding: 6.8rem;
+    }
+
+    .introduction-page__content {
+        padding: 6.8rem 0;
+    }
+
+    .introduction-page__img {
+        padding: 0;
     }
 
     .policy__content--wrap,
@@ -459,9 +474,12 @@
         height: 12.5rem;
     }
 
-    .header-social {
-        display: flex;
-        flex-wrap: wrap;
+    .news__list-item {
+        width: calc(25% - 3.9rem);width: calc(25% - 2rem);
+    }
+
+    .contact__info-info-item--header {
+        font-size: 1.4rem;
     }
 
     .footer__content {
@@ -483,4 +501,220 @@
         padding-top: 1.6rem;
     }
 
+}
+
+@media screen and (max-width: 823px) {
+    #main {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #header .header-social, .header-contact__language {
+        display: none;
+    }
+
+    #header {
+        width: auto;
+        font-size: 1.2rem;
+        padding: 0.8rem 1.6rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center
+    }
+
+    .header-contact .header_social-icon {
+        position: relative;
+        padding: 0;
+        width: 2rem;
+        top: 4px;
+    }
+    .header-contact__email {
+        padding-right: unset;
+    }
+
+    .trapezoid_logo {
+        position: relative;
+        border-width: var(--slider-height-mobile) 0 3.2rem 12.8rem;
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #nav, .nav-logo {
+        height: var(--slider-height-mobile);
+    }
+
+    .nav-logo img {
+        position: relative;
+        width: 11.8rem;
+        height: var(--slider-height-mobile);
+    }
+
+    .nav-search {
+        display: none;
+    }
+
+    .nav-menu {
+        display: inline-block;
+        position: absolute;
+        line-height: var(--slider-height-tablet);
+        font-size: 2rem;
+        color: var(--white-color);
+        z-index: 2;
+        right: 21.1rem;
+        top: -6.8rem;
+
+    }
+
+    .nav_content {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        top: 6.4rem;
+        left: -10rem;
+        line-height: 5rem;
+        z-index: 2;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        overflow-x: hidden;
+        height: 55rem;
+        transition: 0.7s;
+        padding: 0 3.2rem;
+        width: 0;
+    }
+
+    #slider, #slider .slider--lien-he, #slider img {
+        height: 25rem;
+    }
+
+    .slider__content {
+        top: 25%;
+    }
+
+    .slider__content > p:first-child {
+        font-size: 3rem;
+    }
+
+    .slider__content p:last-child {
+        font-size: 1.5rem;
+    }
+
+    .product_item {
+        display: none;
+        flex-direction: column;
+    }
+
+    .product-item {
+        width: 100%;
+        padding: 3.2rem 0;
+        height: 24rem;
+    }
+
+    .product-item__img {
+        margin-top: 0;
+    }
+
+    #contact, #footer, #introduction-policy, #blog, .introduction-page__content, #video, #image, #news {
+        padding: 3.2rem;
+    }
+
+    #policy {
+        padding: 0;
+    }
+    #introdution {
+        padding: 0 0 3.2rem 0;
+    }
+
+    .introduction__content {
+        padding: 3.2rem 0;
+    }
+
+    #contact, #policy, .contact__info, .contact__map, .footer__desc, .footer__content, .footer__desc-left {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact__info, .footer__desc-left {
+        padding: 0;
+        text-align: justify;
+    }
+
+    .contact__info-info-item--header {
+        font-size: 1.2rem;
+    }
+
+    .policy__content {
+        padding: 3.2rem 1.6rem;
+    }
+
+    .policy__content--wrap {
+        height: initial;
+    }
+
+    .policy__img img {
+        width: 100%;
+    }
+
+    .footer__desc-right-wrap, .footer__desc-right {
+        padding-left: 0;
+        padding-top: 2.4rem;
+        flex-wrap: wrap;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    #blog, .introduction-page__img, #video, .image__content, .news__list {
+        flex-direction: column;
+    }
+
+    .blog__list {
+        padding: 0;
+        flex-direction: column;
+        width: 30rem;
+        padding-top: 3.2rem;
+    }
+
+    .blog__list-item, .image__content-item, #image img, .news__list-item {
+        width: 100%;
+    }
+
+    #image img, .news__list-item {
+        padding: 1.6rem 0;
+    }
+
+    .introduction-page__img img {
+        width: 100%;
+        padding-top: 2.4rem;
+    }
+
+    .introduction-page__img img:first-child {
+        padding: 0;
+    }
+
+    .footer__desc-right__header {
+        width: 100%;
+        padding-top: 2.4rem;
+    }
+
+    .footer__ambition {
+        padding: 2.4rem 0;
+        flex-direction: column;
+    }
+
+    .footer__ambition--content, .footer__ambition--content:last-child {
+        padding: 2.4rem 1.6rem;
+    }
+
+    .footer__ambition--content .header-social a {
+        width: 50%;
+    }
+
+    .footer__ambition--content .header-social {
+        display: flex;
+    }
+
+    .footer__copyright {
+        font-size: 1.4rem;
+    }
 }
