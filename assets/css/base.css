@@ -18,18 +18,8 @@ html {
     font-size: 62.5%;  /* = 1rem */
     font-family: 'Outfit', sans-serif;
     font-family: 'Roboto', sans-serif;
-}
-
-.col {
-    width: 100%;
-}
-
-.col-half {
-    width: 50%;
-}
-
-.pd-68-148 {
-    padding: 6.8rem 14.8rem;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
 #app {
@@ -38,31 +28,9 @@ html {
     overflow: hidden;
 }
 
-#main {
-    width: 160rem;
-    max-width: 100%;
-}
 
 /* Vẽ hình thang */
-.trapezoid_logo {
-    position: relative;
-    border-style: solid;
-    border-width: 10.8rem 0 3.2rem 16.8rem;
-    border-color: var(--white-color) transparent transparent var(--white-color);
-    width: 0px;
-    z-index: 1;
-}
 
-.trapezoid_btn {
-    position: relative;
-    border-style: solid;
-    border-width: 4.8rem 0 4.2rem 26.8rem;
-    border-color: var(--primary-color) transparent transparent var(--primary-color);
-    width: 0px;
-    z-index: 1;
-    left: 9%;
-    bottom: -6rem;
-}
 
 .trapezoid_btn:hover {
     bottom: -5rem;

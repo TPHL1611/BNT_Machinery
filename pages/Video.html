@@ -10,156 +10,188 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;700;900&family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap-grid.min.css" integrity="sha512-Xj2sd25G+JgJYwo0cvlGWXoUekbLg5WvW+VbItCMdXrDoZRWcS/d40ieFHu77vP0dF5PK+cX6TIp+DsPfZomhw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/responsive.css">
     <title>Hình ảnh</title>
 </head>
 <body>
     <div id="app">
-        <div id="main">
+        <div id="main" class="container-fluid">
             <header id="header">
-                <div class="header-social">
-                    <a href=""><i class="header_social-icon fab fa-facebook-f"></i></a>
-                    <a href=""><i class="header_social-icon fab fa-twitter"></i></a>
-                    <a href=""><i class="header_social-icon fab fa-instagram"></i></a>
-                    <a href=""><i class="header_social-icon fab fa-youtube"></i></a>
-                </div>
-                <div class="header-contact">
-                    <div class="header-contact__hotline">
-                        <i class="header_social-icon fas fa-headphones-alt"></i>
-                        <a href="">0905361004</a>
-                    </div>
-                    <div class="header-contact__email">
-                        <i class="header_social-icon far fa-envelope"></i>
-                        <a href="">bntmachinery@gmail.com</a>
-                    </div>
-                    <div class="header-contact__language">
-                        <img src="../assets/icon/united-kingdom-pngrepo-com.png" alt="" class="header_social-icon">
-                        <img src="../assets/icon/vietnam-pngrepo-com.png" alt="" class="header_social-icon">
+                <div class="container-big">
+                    <div class="row">
+                        <div class="col col-xl-2 header__item--wrap">
+                            <div class="header__item">
+                                <a href=""><i class="header_item-icon fab fa-facebook-f"></i></a>
+                                <a href=""><i class="header_item-icon fab fa-twitter"></i></a>
+                                <a href=""><i class="header_item-icon fab fa-instagram"></i></a>
+                                <a href=""><i class="header_item-icon fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="col col-xl-10 header__item--wrap justify-content-end">
+                            <div class="col col-xl-11 header__item justify-content-end">
+                                <div class="header__item-contact">
+                                    <i class="header_item-icon fas fa-headphones-alt"></i>
+                                    <a href="">0905361004</a>
+                                </div>
+                                <div class="header__item-contact">
+                                    <i class="header_item-icon far fa-envelope"></i>
+                                    <a href="">bntmachinery@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="col col-xl-1 header__item justify-content-around">
+                                <div class="header__item-language-icon"><img src="../assets/icon/united-kingdom-pngrepo-com.png" alt=""></div>
+                                <div class="header__item-language-icon"><img src="../assets/icon/vietnam-pngrepo-com.png" alt=""></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </header>
-
             <nav id="nav">
-                <div class="trapezoid_logo">
-                    <div class="nav-menu"><i class="fas fa-bars" onclick="openNav()"></i></div>
-                    <div class="nav-logo">
-                        <img src="../assets/img/logo.png" alt="">
-                    </div>
-                </div>
-                <div class="nagigation">
-                    <ul class="nav_content">
-                        <i class="nav_content--close fas fa-times"  onclick="closeNav()"></i>
-                        <li><a href="../index.html">Trang chủ</a></li>
-                        <li><a href="./Gioi_Thieu.html">Giới thiệu</a></li>
-                        <li><a href="./San_Pham.html">Sản phẩm</a>
-                            <ul class="subnav">
-                                <a href="./Chi_Tiet_San_Pham.html"><li>Máy xăm</li></a>
-                                <a href="./Chi_Tiet_San_Pham.html"><li>Máy tách xương</li></a>
-                                <a href="./Chi_Tiet_San_Pham.html"><li>Máy khói</li></a>
-                            </ul>
-                        </li>
-                        <li><a href="./Dai_Ly.html">Đại lý</a></li>
-                        <li><a href="#">Video</a></li>
-                        <li><a href="./Hinh_Anh.html">Hình ảnh</a></li>
-                        <li><a href="./Tin_Tuc.html">Tin tức</a></li>
-                        <li><a href="./Lien_He.html">Liên hệ</a></li>
-                    </ul>
-                </div>
-                <div class="nav-search">
-                    <input type="text" placeholder="Tìm kiếm nhanh ...">
-                    <div class="nav-search--icon"><i class="fas fa-search"></i></div>
-                </div>
-            </nav>
-
-            <div id="slider" class="slider__page-product">
-                <div class="slider__content slider__content--san-pham">
-                    <p>TRANG CHỦ <i class="fas fa-long-arrow-alt-right"></i> VIDEO</p>
-                    <p>Video</p>
-                </div>
-            </div>
-
-            <div id="video" class="pd-68-148">
-                    <div class="image__content-item">
-                        <img src="../assets/img/video_1.png" alt="">
-                        <i class="image__content-icon fas fa-play"></i>
-                    </div>
-                    <div class="image__content-item">
-                        <img src="../assets/img/video_clip.png" alt="">
-                        <i class="image__content-icon fas fa-play"></i>
-                    </div>
-                    <div class="image__content-item">
-                        <img src="../assets/img/video_2.png" alt="">
-                        <i class="image__content-icon fas fa-play"></i>
-                    </div>
-            </div>
-
-            <footer id="footer">
-                <div class="footer__desc">
-                    <div class="footer__desc-left">
-                        <div class="trapezoid_logo">
-                            <div class="nav-logo nav-logo--footer">
+                <div class="container-big">
+                    <div class="row">
+                        <div class="col col-xl-2 nav__item">
+                            <div class="nav__item-menu"><i class="fas fa-bars" onclick="openNav()"></i></div>
+                            <div class="nav__item-logo clip-path-logo">
                                 <img src="../assets/img/logo.png" alt="">
                             </div>
                         </div>
-                        <div class="footer__content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas</p>
+                        <div class=" col col-xl-8 nav__item">
+                            <ul class="nav__item-content">
+                                <i class="nav_content--close fas fa-times" onclick="closeNav()"></i>
+                                <li><a href="../index.html">Trang chủ</a></li>
+                                <li><a href="./Gioi_Thieu.html">Giới thiệu</a></li>
+                                <li><a href="./San_Pham.html">Sản phẩm</a>
+                                    <ul class="subnav">
+                                        <a href="./Chi_Tiet_San_Pham.html"><li>Máy xăm</li></a>
+                                        <a href="./Chi_Tiet_San_Pham.html"><li>Máy tách xương</li></a>
+                                        <a href="./Chi_Tiet_San_Pham.html"><li>Máy khói</li></a>
+                                    </ul>
+                                </li>
+                                <li><a href="./Dai_Ly.html">Đại lý</a></li>
+                                <li><a href="./Video.html">Video</a></li>
+                                <li><a href="./Hinh_Anh.html">Hình ảnh</a></li>
+                                <li><a href="./Tin_Tuc.html">Tin tức</a></li>
+                                <li><a href="./Lien_He.html">Liên hệ</a></li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="footer__desc-right-wrap">
-                        <ul class="footer__desc-right">
-                            <li class="footer__desc-right__header">
-                                Sản phẩm
-                                <ul class="footer__desc-right__item">
-                                    <li>Máy xăm</li>
-                                    <li>Máy tách xương</li>
-                                    <li>Máy khói</li>
-                                </ul>
-                            </li>
-
-                            <li class="footer__desc-right__header">
-                                Thông tin chung
-                                <ul class="footer__desc-right__item">
-                                    <li>Giới thiệu</li>
-                                    <li>Sản phẩm</li>
-                                    <li>Chính sách Đại lý</li>
-                                </ul>
-                            </li>
-
-                            <li class="footer__desc-right__header">
-                                Thông tin liên hệ
-                                <ul class="footer__desc-right__item">
-                                    <li class="footer__desc-right__item--no-bb">
-                                        <i class="fas fa-map-marked"></i>
-                                        <p>233 Đường 23/10 - P. Phương Sơn - Nha Trang - Khánh Hòa</p>
-                                    </li>
-                                    <li class="footer__desc-right__item--no-bb">
-                                        <i class="fas fa-phone-alt"></i>
-                                        <p>0905361004</p>
-                                    </li>
-                                    <li class="footer__desc-right__item--no-bb">
-                                        <i class="far fa-envelope"></i>
-                                        <p>baonambnt@gmail.com</p>
-                                    </li>
-                                </ul>
-                            </li>                            
-                        </ul>
+                        <div class="col col-xl-2 nav__item  nav__item-search">
+                            <div class="col col-xl-10 nav__item-search--input">
+                                <input type="text" placeholder="Tìm kiếm nhanh ...">
+                            </div>
+                            <div class="col col-xl-2 nav__item-search--icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
-                <div class="footer__ambition">
-                    <div class="footer__ambition--content">
-                        <div class="header-social">
-                            <a href=""><i class="header_social-icon fab fa-facebook-f"></i>Facebook</a>
-                            <a href=""><i class="header_social-icon fab fa-twitter"></i>Twitter</a>
-                            <a href=""><i class="header_social-icon fab fa-instagram"></i>Instagram</a>
-                            <a href=""><i class="header_social-icon fab fa-youtube"></i>Youtube</a>
-                        </div>
-                    </div>
-                    <div class="footer__ambition--content">
-                        <p>10 Năm kinh nghiệm sản xuất cung cấp thiết bị ngành chế biến cá ngừ</p>
+            </nav>
+            <div id="slider__page--no-bg">
+                <div class="row">
+                    <div class="col col-xl-12 slider__page--no-bg-content">
+                        <p><span>TRANG CHỦ</span> <i class="fas fa-long-arrow-alt-right"></i> <span>SẢN PHẨM</span></p>
+                        <p>Hình ảnh</p>
                     </div>
                 </div>
-                <div class="footer__copyright">
-                    <p>Copyright <i class="far fa-copyright"></i> 2021. BNT Machinery. Designed by PutaDesign</p>
+            </div>
+            <div id="video">
+                    <div class="wide-s">
+                        <div class="row">
+                            <div class="col col-xl-4 video-item">
+                                <div class="video-item-image"><img src="../assets/img/video_1.png" alt=""></div>
+                                <i class="video-icon fas fa-play"></i>
+                            </div>
+                            <div class="col col-xl-4 video-item">
+                                <div class="video-item-image"><img src="../assets/img/video_clip.png" alt=""></div>
+                                <i class="video-icon fas fa-play"></i>
+                            </div>
+                            <div class="col col-xl-4 video-item">
+                                <div class="video-item-image"><img src="../assets/img/video_2.png" alt=""></div>
+                                <i class="video-icon fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <footer id="footer">
+                <div class="container-small">
+                    <div class="row">
+                        <div class="col col-xl-12 footer__desc">
+                            <div class="col col-xl-3 footer__desc-left">
+                                <div class="col col-xl-12 nav__item-logo clip-path-logo">
+                                    <img src="../assets/img/logo.png" alt="">
+                                </div>
+                                <div class="col col-xl-12 footer__content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas</p>
+                                </div>
+                            </div>
+                            <div class="col col-xl-9 footer__desc-right-wrap">
+                                    <ul class="footer__desc-right">
+                                        <li class="col col-xl-4 footer__desc-right__header">
+                                            Sản phẩm
+                                            <ul class="footer__desc-right__item">
+                                                <a href="">
+                                                    <li>Máy xăm</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Máy tách xương</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Máy khói</li>
+                                                </a>
+                                            </ul>
+                                        </li>
+                                        <li class="col col-xl-4 footer__desc-right__header">
+                                            Thông tin chung
+                                            <ul class="footer__desc-right__item">
+                                                <a href="">
+                                                    <li>Giới thiệu</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Sản phẩm</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Chính sách Đại lý</li>
+                                                </a>
+                                            </ul>
+                                        </li>
+                                        <li class="col col-xl-4 footer__desc-right__header">
+                                            Thông tin liên hệ
+                                            <ul class="footer__desc-right__item">
+                                                <li class="footer__desc-right__item--no-bb">
+                                                    <i class="fas fa-map-marked"></i>
+                                                    <a href="">233 Đường 23/10 - P. Phương Sơn - Nha Trang - Khánh Hòa</a>
+                                                </li>
+                                                <li class="footer__desc-right__item--no-bb">
+                                                    <i class="fas fa-phone-alt"></i>
+                                                    <a href="">0905361004</a>
+                                                </li>
+                                                <li class="footer__desc-right__item--no-bb">
+                                                    <i class="far fa-envelope"></i>
+                                                    <a href="">baonambnt@gmail.com</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                            </div>
+                        </div>
+                        <div class="col col-xl-12 footer__ambition">
+                            <div class="col col-xl-5 footer__ambition--content">
+                                <div class="footer__social">
+                                    <a href=""><i class="footer__social-icon fab fa-facebook-f"></i>Facebook</a>
+                                    <a href=""><i class="footer__social-icon fab fa-twitter"></i>Twitter</a>
+                                    <a href=""><i class="footer__social-icon fab fa-instagram"></i>Instagram</a>
+                                    <a href=""><i class="footer__social-icon fab fa-youtube"></i>Youtube</a>
+                                </div>
+                            </div>
+                            <div class="col col-xl-7 footer__ambition--content">
+                                <p>10 Năm kinh nghiệm sản xuất cung cấp thiết bị ngành chế biến cá ngừ</p>
+                            </div>
+                        </div>
+                        <div class="col col-xl-12 footer__copyright">
+                            <p>Copyright <i class="far fa-copyright"></i> 2021. BNT Machinery. Designed by PutaDesign</p>
+                        </div>
+                    </div>
                 </div>
             </footer>
         </div>
