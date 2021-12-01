@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap-grid.min.css" integrity="sha512-Xj2sd25G+JgJYwo0cvlGWXoUekbLg5WvW+VbItCMdXrDoZRWcS/d40ieFHu77vP0dF5PK+cX6TIp+DsPfZomhw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,43 +16,48 @@
 </head>
 <body>
     <div id="app">
-        <div id="main" class="grid">
+        <div id="main" class="container-fluid">
             <header id="header">
-                <div class="wide-l row">
-                    <div class="col l-2 header__item">
-                        <a href=""><i class="header_item-icon fab fa-facebook-f"></i></a>
-                        <a href=""><i class="header_item-icon fab fa-twitter"></i></a>
-                        <a href=""><i class="header_item-icon fab fa-instagram"></i></a>
-                        <a href=""><i class="header_item-icon fab fa-youtube"></i></a>
-                    </div>
-                    <div class="col l-5"></div>
-                    <div class="col l-4 header__item">
-                        <div class="header__item-contact">
-                            <i class="header_item-icon fas fa-headphones-alt"></i>
-                            <a href="">0905361004</a>
+                <div class="container-big container">
+                    <div class="row">
+                        <div class="col-12 col-xl-2 col-md-4 col-sm-12 header__item--wrap">
+                            <div class="header__item">
+                                <a href=""><i class="header_item-icon fab fa-facebook-f"></i></a>
+                                <a href=""><i class="header_item-icon fab fa-twitter"></i></a>
+                                <a href=""><i class="header_item-icon fab fa-instagram"></i></a>
+                                <a href=""><i class="header_item-icon fab fa-youtube"></i></a>
+                            </div>
                         </div>
-                        <div class="header__item-contact">
-                            <i class="header_item-icon far fa-envelope"></i>
-                            <a href="">bntmachinery@gmail.com</a>
+                        <div class="col col-xl-10 col-md-8 header__item--wrap justify-content-end">
+                            <div class="col col-xl-11 col-md-10 header__item justify-content-end">
+                                <div class="header__item-contact">
+                                    <i class="header_item-icon fas fa-headphones-alt"></i>
+                                    <a href="">0905361004</a>
+                                </div>
+                                <div class="header__item-contact">
+                                    <i class="header_item-icon far fa-envelope"></i>
+                                    <a href="">bntmachinery@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="col col-xl-1 col-md-2 header__item justify-content-around justify-content-md-end">
+                                <div class="header__item-language-icon"><img src="../assets/icon/united-kingdom-pngrepo-com.png" alt=""></div>
+                                <div class="header__item-language-icon"><img src="../assets/icon/vietnam-pngrepo-com.png" alt=""></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col l-1 header__item">
-                        <div class="header__item-language-icon"><img src="../assets/icon/united-kingdom-pngrepo-com.png" alt=""></div>
-                        <div class="header__item-language-icon"><img src="../assets/icon/vietnam-pngrepo-com.png" alt=""></div>
                     </div>
                 </div>
             </header>
             <nav id="nav">
-                <div class="wide-l">
+                <div class="container-big container">
                     <div class="row">
-                        <div class="col l-2 nav__item">
-                            <div class="nav__item-menu"><i class="fas fa-bars" onclick="openNav()"></i></div>
-                            <div class="nav__item-logo clip-path-logo">
+                        <div class="col-12 col-xl-2 col-lg-2 col-md-12 nav__item">
+                            <div class="col-md-2 col-sm-2 nav__item-menu"><i class="fas fa-bars" onclick="openNav()"></i></div>
+                            <div class="nav__item-logo">
                                 <img src="../assets/img/logo.png" alt="">
                             </div>
                         </div>
-                        <div class=" col l-8 nav__item">
-                            <ul class="nav__item-content">
+                        <div class=" col col-xl-8 col-lg-10 nav__item nav__item-content">
+                            <ul>
                                 <i class="nav_content--close fas fa-times" onclick="closeNav()"></i>
                                 <li><a href="../index.html">Trang chủ</a></li>
                                 <li><a href="./Gioi_Thieu.html">Giới thiệu</a></li>
@@ -70,12 +75,35 @@
                                 <li><a href="./Lien_He.html">Liên hệ</a></li>
                             </ul>
                         </div>
-                        <div class="col l-2 nav__item  nav__item-search">
-                            <div class="col l-10 nav__item-search--input">
+                        <div class="col col-xl-2 col-lg-auto nav__item  nav__item-search">
+                            <div class="col col-xl-10 nav__item-search--input">
                                 <input type="text" placeholder="Tìm kiếm nhanh ...">
                             </div>
-                            <div class="col l-2 nav__item-search--icon">
+                            <div class="col col-xl-2 nav__item-search--icon">
                                 <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                        <div class="menu-mobile">
+                            <div class="menu-mobile-wrap">
+                                <div class="overlay" onclick="closeNav()"></div>
+                                <div class="main-menu">
+                                    <ul>
+                                        <li><a href="../index.html">Trang chủ</a></li>
+                                        <li><a href="#">Giới thiệu</a></li>
+                                        <li><a href="./San_Pham.html">Sản phẩm</a>
+                                            <ul class="subnav">
+                                                <a href="./Chi_Tiet_San_Pham.html"><li>Máy xăm</li></a>
+                                                <a href="./Chi_Tiet_San_Pham.html"><li>Máy tách xương</li></a>
+                                                <a href="./Chi_Tiet_San_Pham.html"><li>Máy khói</li></a>
+                                            </ul>
+                                        </li>
+                                        <li><a href="./Dai_Ly.html">Đại lý</a></li>
+                                        <li><a href="./Video.html">Video</a></li>
+                                        <li><a href="./Hinh_Anh.html">Hình ảnh</a></li>
+                                        <li><a href="./Tin_Tuc.html">Tin tức</a></li>
+                                        <li><a href="./Lien_He.html">Liên hệ</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         
@@ -93,84 +121,86 @@
             </div>
 
             <div id="product-details">
-                <div class="wide-s row">
-                    <div class="col l-4 product-details">
-                        <ul class="product-details__menu">
-                            <li class="product-details__menu--item active">Tính năng</li>
-                            <li class="product-details__menu--item">Thông số kỹ thuật</li>
-                            <li class="product-details__menu--item">Tài liệu hướng dẫn</li>
-                            <li class="product-details__menu--item">Video Clip</li>
-                            <li class="product-details__menu--item">Hỗ trợ kỹ thuật</li>
-                        </ul>
-                    </div>
-                    <div class="col l-8 wrapped">
-                        <div class="col l-12 product-details__wrap">
-                            <ul class="col l-7 product-details__desc">
-                                <li>Precision and Reliability</li>
-                                <li>Reduction in Rework and Weighing Loss</li>
-                                <li>High - Speed and High - Accuracy Opearation</li>
-                                <li>Full color touch screen opearation interface</li>
-                                <li>Over / under weigh and Time over rejection</li>
-                                <li>Network Remote control and data acquisition</li>
-                                <li>Easy to install, easy to use, ip65 waterproof enclosure</li>
-                                <li>Reduction in Rework and Weighing Loss</li>
-                                <li>High - Speed and High - Accuracy Opearation</li>
+                <div class="container-small container">
+                    <div class="row">
+                        <div class="col col-xl-4 col-lg-3 product-details">
+                            <ul class="product-details__menu">
+                                <li class="product-details__menu--item active">Tính năng</li>
+                                <li class="product-details__menu--item">Thông số kỹ thuật</li>
+                                <li class="product-details__menu--item">Tài liệu hướng dẫn</li>
+                                <li class="product-details__menu--item">Video Clip</li>
+                                <li class="product-details__menu--item">Hỗ trợ kỹ thuật</li>
                             </ul>
-                            <div class="col l-5 product-details__img">
-                                <img src="../assets/img/product-1.png" alt="">
+                        </div>
+                        <div class="col col-xl-8 col-lg-9 wrapped">
+                            <div class="col col-xl-12 product-details__wrap">
+                                <ul class="col col-xl-7 product-details__desc">
+                                    <li>Precision and Reliability</li>
+                                    <li>Reduction in Rework and Weighing Loss</li>
+                                    <li>High - Speed and High - Accuracy Opearation</li>
+                                    <li>Full color touch screen opearation interface</li>
+                                    <li>Over / under weigh and Time over rejection</li>
+                                    <li>Network Remote control and data acquisition</li>
+                                    <li>Easy to install, easy to use, ip65 waterproof enclosure</li>
+                                    <li>Reduction in Rework and Weighing Loss</li>
+                                    <li>High - Speed and High - Accuracy Opearation</li>
+                                </ul>
+                                <div class="col col-xl-5 product-details__img">
+                                    <img src="../assets/img/product-1.png" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col l-12 product-details__wrap">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Model</th>
-                                        <th>Chi tiết</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Needle</td>
-                                        <td>316 SS, 1mm, three cut, hure tip</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Number of needed</td>
-                                        <td>324</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Capcity kg/hour</td>
-                                        <td>3000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Number of workers</td>
-                                        <td>01</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pressure (bar/psi)</td>
-                                        <td>>= 1 bar / 15 psi</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="product-details__wrap">
-                        </div>
-                        <div class="product-details__wrap">
-                            <div class="product-details__wrap-image">
-                                <img src="../assets/img/video_clip.png" alt="">
+                            <div class="col col-xl-12 product-details__wrap">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Model</th>
+                                            <th>Chi tiết</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Needle</td>
+                                            <td>316 SS, 1mm, three cut, hure tip</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Number of needed</td>
+                                            <td>324</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capcity kg/hour</td>
+                                            <td>3000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Number of workers</td>
+                                            <td>01</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pressure (bar/psi)</td>
+                                            <td>>= 1 bar / 15 psi</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="image__content-icon">
-                                <i class="fas fa-play"></i>
+                            <div class="product-details__wrap">
                             </div>
-                        </div>
-                        <div class="product-details__wrap active">
-                            <div class="product-details__wrap--ky-thuat">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas</p>
-                                <p class="product-details__company">BNT Machinery Company</p>
-                                <div class="product-details__contact">
-                                    <p><span>Địa chỉ:</span> 233 Đường 23/10 - P. Phương Sơn - Nha Trang - Khánh Hòa</p>
-                                    <p><span>Email:</span> baonambnt@gmail.com</p>
-                                    <p><span>Hotline:</span> 0905361004</p>
+                            <div class="product-details__wrap">
+                                <div class="product-details__wrap-image">
+                                    <img src="../assets/img/video_clip.png" alt="">
+                                </div>
+                                <div class="image__content-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="product-details__wrap active">
+                                <div class="product-details__wrap--ky-thuat">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas</p>
+                                    <p class="product-details__company">BNT Machinery Company</p>
+                                    <div class="product-details__contact">
+                                        <p><span>Địa chỉ:</span> 233 Đường 23/10 - P. Phương Sơn - Nha Trang - Khánh Hòa</p>
+                                        <p><span>Email:</span> baonambnt@gmail.com</p>
+                                        <p><span>Hotline:</span> 0905361004</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -179,95 +209,96 @@
             </div>
 
             <div id="product">
-                <div class="product__image"><img src="../assets/img/background-product.png" alt=""></div>
-                <div class="wide-l row product_list">
-                    
-                        <div class="col l-3 product__item">
+                <div class="container-big">
+                    <div class="row product_list">
+                        <div class="col-7 col-xl-3 col-lg-5 col-md-7 col-sm-7 product__item">
                             <div class="product__item-image"><img src="../assets/img/product-1.png" alt="" class="product-item__img product-item__img--1"></div>
-                            <div class="trapezoid_btn clip-path">
-                                <p>Máy xăm</p>
-                            </div>
+                            <a href="#">
+                                <div class="trapezoid_btn clip-path">
+                                    <p>Máy xăm</p>
+                                </div>
+                            </a>
                         </div>
-                        <div class="col l-3 product__item">
+                        <div class="col-7 col-xl-3 col-lg-5 col-md-7 col-sm-7 product__item">
                             <div class="product__item-image"><img src="../assets/img/product-2.png" alt="" class="product-item__img product-item__img--2"></div>
                             <div class="trapezoid_btn clip-path">
                                 <p>Máy tách xương</p>
                             </div>
                         </div>
-                        <div class="col l-3 product__item">
+                        <div class="col-7 col-xl-3 col-lg-5 col-md-7 col-sm-7 product__item">
                             <div class="product__item-image"><img src="../assets/img/product-3.png" alt="" class="product-item__img product-item__img--3"></div>
                             <div class="trapezoid_btn clip-path">
                                 <p>Máy khói</p>
                             </div>
                         </div>
+                    </div>
                 </div>
-            </img>
             </div>
 
             <footer id="footer">
-                <div class="wide-s">
+                <div class="container-small container">
                     <div class="row">
-                        <div class="col l-12 footer__desc">
-                            <div class="col l-3 footer__desc-left">
-                                <div class="col l-12 nav__item-logo clip-path-logo">
-                                    <img src="../assets/img/logo.png" alt="">
-                                </div>
-                                <div class="col l-12 footer__content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas</p>
-                                </div>
+                        <div class="col-12 col-xl-3 col-lg-12 col-md-12 col-sm-12 footer__desc-left">
+                            <div class="col col-xl-12 col-lg-4 col-md-12 col-sm-12 nav__item-logo">
+                                <img src="../assets/img/logo.png" alt="">
                             </div>
-                            <div class="col l-9 footer__desc-right-wrap">
-                                    <ul class="footer__desc-right">
-                                        <li class="col l-4 footer__desc-right__header">
-                                            Sản phẩm
-                                            <ul class="footer__desc-right__item">
-                                                <a href="">
-                                                    <li>Máy xăm</li>
-                                                </a>
-                                                <a href="">
-                                                    <li>Máy tách xương</li>
-                                                </a>
-                                                <a href="">
-                                                    <li>Máy khói</li>
-                                                </a>
-                                            </ul>
-                                        </li>
-                                        <li class="col l-4 footer__desc-right__header">
-                                            Thông tin chung
-                                            <ul class="footer__desc-right__item">
-                                                <a href="">
-                                                    <li>Giới thiệu</li>
-                                                </a>
-                                                <a href="">
-                                                    <li>Sản phẩm</li>
-                                                </a>
-                                                <a href="">
-                                                    <li>Chính sách Đại lý</li>
-                                                </a>
-                                            </ul>
-                                        </li>
-                                        <li class="col l-4 footer__desc-right__header">
-                                            Thông tin liên hệ
-                                            <ul class="footer__desc-right__item">
-                                                <li class="footer__desc-right__item--no-bb">
-                                                    <i class="fas fa-map-marked"></i>
-                                                    <a href="">233 Đường 23/10 - P. Phương Sơn - Nha Trang - Khánh Hòa</a>
-                                                </li>
-                                                <li class="footer__desc-right__item--no-bb">
-                                                    <i class="fas fa-phone-alt"></i>
-                                                    <a href="">0905361004</a>
-                                                </li>
-                                                <li class="footer__desc-right__item--no-bb">
-                                                    <i class="far fa-envelope"></i>
-                                                    <a href="">baonambnt@gmail.com</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                            <div class="col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 footer__content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas</p>
                             </div>
                         </div>
-                        <div class="col l-12 footer__ambition">
-                            <div class="col l-5 footer__ambition--content">
+                        <div class="col-12 col-xl-9 col-lg-12 col-md-12 col-sm-12 footer__desc-right-wrap">
+                                <ul class="footer__desc-right">
+                                    <li class="col-12 col-xl-4 col-lg-4 col-md-4 col-sm-12 footer__desc-right__header">
+                                        <p>Sản phẩm</p>
+                                        <ul class="footer__desc-right__item">
+                                            <a href="">
+                                                <li>Máy xăm</li>
+                                            </a>
+                                            <a href="">
+                                                <li>Máy tách xương</li>
+                                            </a>
+                                            <a href="">
+                                                <li>Máy khói</li>
+                                            </a>
+                                        </ul>
+                                    </li>
+                                    <li class="col-12 col-xl-4 col-lg-4 col-md-4 col-sm-12 footer__desc-right__header">
+                                        <p>Thông tin chung</p>
+                                        <ul class="footer__desc-right__item">
+                                            <a href="">
+                                                <li>Giới thiệu</li>
+                                            </a>
+                                            <a href="">
+                                                <li>Sản phẩm</li>
+                                            </a>
+                                            <a href="">
+                                                <li>Chính sách Đại lý</li>
+                                            </a>
+                                        </ul>
+                                    </li>
+                                    <li class="col-12 col-xl-4 col-lg-4 col-md-4 col-sm-12 footer__desc-right__header">
+                                        <p>Thông tin liên hệ</p>
+                                        <ul class="footer__desc-right__item">
+                                            <li class="footer__desc-right__item--no-bb">
+                                                <i class="fas fa-map-marked"></i>
+                                                <a href="">233 Đường 23/10 - P. Phương Sơn - Nha Trang - Khánh Hòa</a>
+                                            </li>
+                                            <li class="footer__desc-right__item--no-bb">
+                                                <i class="fas fa-phone-alt"></i>
+                                                <a href="">0905361004</a>
+                                            </li>
+                                            <li class="footer__desc-right__item--no-bb">
+                                                <i class="far fa-envelope"></i>
+                                                <a href="">baonambnt@gmail.com</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                        </div>                        
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-xl-12 col-lg-12 col-md-12 footer__ambition">
+                            <div class="col col-xl-5 col-lg-5 col-md-12 footer__ambition--content">
                                 <div class="footer__social">
                                     <a href=""><i class="footer__social-icon fab fa-facebook-f"></i>Facebook</a>
                                     <a href=""><i class="footer__social-icon fab fa-twitter"></i>Twitter</a>
@@ -275,11 +306,13 @@
                                     <a href=""><i class="footer__social-icon fab fa-youtube"></i>Youtube</a>
                                 </div>
                             </div>
-                            <div class="col l-7 footer__ambition--content">
+                            <div class="col col-xl-7 col-lg-7 col-md-12 footer__ambition--content">
                                 <p>10 Năm kinh nghiệm sản xuất cung cấp thiết bị ngành chế biến cá ngừ</p>
                             </div>
                         </div>
-                        <div class="col l-12 footer__copyright">
+                    </div>
+                    <div class="row">
+                        <div class="col col-xl-12 col-lg-12 footer__copyright">
                             <p>Copyright <i class="far fa-copyright"></i> 2021. BNT Machinery. Designed by PutaDesign</p>
                         </div>
                     </div>
