@@ -35,7 +35,7 @@ $primary-color: rgb(31, 37, 51);
 }
 
 .clip-path {
-    clip-path: polygon(0 0, 100% 0, 100% 27%, 0 43%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
 
 .clip-path-logo {
@@ -116,6 +116,7 @@ $primary-color: rgb(31, 37, 51);
     .nav__item {
         @include position();
         z-index: 1;
+        max-height: 10.7rem;
 
         &-menu {
             display: none;
@@ -123,16 +124,10 @@ $primary-color: rgb(31, 37, 51);
     
         &-logo {
             @include position();
-            top: -1rem;
             z-index: 1;
-            padding: 6rem 5rem;
-            max-height: 10rem;
     
             img {
-                @include position(absolute);
-                top: 1rem;
-                left: 0;
-                width: 100%;
+                @include position();
             }
         }
 
@@ -152,65 +147,65 @@ $primary-color: rgb(31, 37, 51);
                     transition: transform ease 0.5s;
 
                     &:hover {
-                        transform: scale(130%);
+                        // transform: scale(130%);
                     }
                 }
-            }
-            
-            li a {
-                @include link();
-                @include font-color(2rem,unset, $white-color);
-                opacity: 0.8;
-            }
-            
-            > li {
-                @include list();
-                @include position();
-                transition: transform ease 0.3s;
-            }
 
-            > li:hover {
-                transform: scale(120%);
-            }
-
-            > li:hover .subnav {
-                display: block;
-            }
-            
-            .subnav {
-                display: none;
-                @include background-color($white-color);
-                @include position(absolute);
-                @include flexbox(column, unset, unset);
-                top: calc(100% - 2rem);
-                z-index: 9999;
-                min-width: 20rem;
-                line-height: 2.4rem;
-                opacity: 1;
-                animation: ease swipeRight 0.5s;
-                transform: scale(0);
-                box-shadow: 1rem 1rem 10rem rgba(172, 172, 172, 0.685);
-
-                &:before {
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                    height: 2.4rem;
-                    top: -2rem;
-                    left: 0;
+                li a {
+                    @include link();
+                    @include font-color(2rem,unset, $white-color);
+                    opacity: 0.8;
                 }
-
-                li {
+                
+                > li {
                     @include list();
-                    @include font-color(2rem, unset, $primary-color);
-                    padding: 1.6rem;
-
-                    &:hover {
-                        @include background-color($primary-color);
-                        @include font-color(unset, unset, $white-color);
+                    @include position();
+                    transition: transform ease 0.3s;
+                }
+    
+                > li:hover {
+                    transform: scale(120%);
+                }
+    
+                > li:hover .subnav {
+                    @include flexbox(column, unset, unset);
+                }
+                
+                .subnav {
+                    display: none;
+                    @include background-color($white-color);
+                    @include position(absolute);
+                    top: calc(100% + 1rem);
+                    z-index: 9999;
+                    min-width: 20rem;
+                    line-height: 2.4rem;
+                    opacity: 1;
+                    animation: ease swipeRight 0.5s;
+                    box-shadow: 1rem 1rem 10rem rgba(172, 172, 172, 0.685);
+                    transform: scale(1);
+    
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 2.4rem;
+                        top: -2rem;
+                        left: 0;
+                    }
+    
+                    li {
+                        @include list();
+                        @include font-color(2rem, unset, $primary-color);
+                        padding: 1.6rem;
+    
+                        &:hover {
+                            @include background-color($primary-color);
+                            @include font-color(unset, unset, $white-color);
+                        }
                     }
                 }
             }
+            
         }
     
         &-search {
@@ -349,20 +344,28 @@ $primary-color: rgb(31, 37, 51);
         background-color: $white-color;
         text-align: center;
         position: relative;
-        padding: 3.2rem;
+        // padding: 3.2rem;
 
-        &-image img {
+        &-image {
             width: 100%;
-        }
+            height: 42.5rem;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        } 
     }
 
     .trapezoid_btn {
-        background-color: $primary-color;
+        @include background-color($primary-color);
+        @include position(absolute);
         width: 80%;
         left: 10%;
-        position: absolute;
-        padding: 8rem;
+        bottom: -10%;
         text-align: center;
+        padding: 25px 10px 30px;
         transition: all ease 0.5s;
 
         &:hover {
@@ -371,11 +374,8 @@ $primary-color: rgb(31, 37, 51);
         }
 
         p {
-            position: absolute;
             font-size: 2rem;
-            top: 10%;
             color: $white-color;
-            left: 25%;
         }
     }
 }
@@ -411,13 +411,12 @@ $primary-color: rgb(31, 37, 51);
             @include background-color($primary-color);
             @include position();
             text-align: center;
-            padding: 7rem 3rem;
-            margin: 0 auto;
+            padding: 2rem 3rem 3rem;
+            margin: 0 auto 6.8rem;
             width: 20%;
     
             p {
                 @include font-color(2rem, unset, $white-color);
-                @include position(absolute);
                 top: 8%;
             }
         }
@@ -462,7 +461,6 @@ $primary-color: rgb(31, 37, 51);
         }
     }
 }
-
 
 #blog {
     @include background-color(rgb(229, 229, 229));
@@ -566,9 +564,15 @@ $primary-color: rgb(31, 37, 51);
         }
 
         &-item {
-            width: 100%;
-            height: 100%;
-
+            
+            &:last-child {
+                margin-top: 3.2rem;
+            }
+            
+            &-image {
+                height: 100%;
+                margin: 0 auto;
+            }
 
             img {
                 width: 100%;
@@ -778,7 +782,6 @@ $primary-color: rgb(31, 37, 51);
 
     .product-details {
 
-
         &__menu {
             @include background-color(rgb(243, 247, 250));
             box-shadow: 1rem 1rem 2rem #ccc;
@@ -947,13 +950,15 @@ $primary-color: rgb(31, 37, 51);
                 p {
                     padding-bottom: 1.6rem;
                     border-bottom: 5px solid #ccc;
+                    @include position();
 
                     &:before {
                         content: "";
-                        // @include background-color(red);
-                        @include position();
-                        // border: 1px solid red;
-                        // border-width: 15px;
+                        @include background-color(red);
+                        @include position(absolute);
+                        width: 15%;
+                        height: 5px;
+                        bottom: -15%;
                     }
 
                 }
@@ -1097,10 +1102,7 @@ $primary-color: rgb(31, 37, 51);
             
             &-logo {
                 width: 100%;
-                padding: 3rem 5rem;
                 @include position();
-                top: -1rem;
-                left: 0;
 
                 img {
                     width: 80%;
@@ -1149,11 +1151,7 @@ $primary-color: rgb(31, 37, 51);
         }
 
         .product__item {
-            height: 100%;
-
-            &:last-child {
-                margin-top: 8.5rem;
-            }
+            margin-top: 9.5rem;
         }
     }
 
@@ -1183,6 +1181,25 @@ $primary-color: rgb(31, 37, 51);
                 margin: auto;
                 
             }
+        }
+    }
+
+    #product-details {
+        .product-details {
+            &__wrap {
+                &.active {
+                    @include flexbox(column, center, center);
+                    flex-wrap: wrap;
+                }
+            }
+
+            &__img {
+                margin-top: 3.2rem;
+            }
+
+        }
+        .wrapped {
+            padding-left: 0;
         }
     }
 
@@ -1334,7 +1351,12 @@ $primary-color: rgb(31, 37, 51);
     #product {
 
         .product__item {
-            margin: 0 auto 4.8rem;
+            margin: 0 auto 9.8rem;
+
+            &-image {
+                height: 55.5rem;
+                width: 100%;
+            }
         }
     }
 
@@ -1394,7 +1416,12 @@ $primary-color: rgb(31, 37, 51);
 
     #image {
         .image__content-item {
-            margin: 1.6rem auto;
+            margin: 0 auto;
+            @include flexbox(column, center, center);
+
+            &-image {
+                margin-top: 1.6rem;
+            }
         }
     }
 
@@ -1410,12 +1437,22 @@ $primary-color: rgb(31, 37, 51);
         }
 
         .footer__ambition {
-            
-            .footer__social {
-                @include font-color(1.8rem, unset, unset);
-            }
 
             &--content {
+
+                .footer__social {
+                    
+                    a {
+                        @include font-color(1.8rem, unset, $white-color);
+                        @include link();
+                        padding: 0 1.6rem;
+
+                    }
+
+                    &-icon {
+                        padding-right: 0.8rem;
+                    }
+                }
 
                 &:last-child p {
                     @include font-color(1.8rem, 600, $primary-color);
@@ -1481,11 +1518,11 @@ $primary-color: rgb(31, 37, 51);
         }
 
         .product__item {
-            height: 100%;
-            margin-top: 8.5rem;
+            height: unset;
 
-            &:first-child {
-                margin-top: 0;
+            &-image {
+                height: unset;
+                width: 100%;
             }
         }
     }
@@ -1675,11 +1712,10 @@ $primary-color: rgb(31, 37, 51);
         }
 
         .product__item {
-            height: 100%;
             margin: 8.5rem auto 0;
 
-            &:first-child {
-                margin-top: 0;
+            &-image {
+                width: 100%;
             }
         }
 

@@ -20,29 +20,7 @@ function closeNav() {
 
 }
 
-function openMenu() {
-    const menuProducts = document.querySelectorAll(".product-details__menu--item")
-    const descProducts = document.querySelectorAll(".product-details__wrap")
-
-    menuProducts.forEach(function(menuProduct, index) {
-        const descProduct = descProducts[index]
-
-        menuProduct.onclick = function() {
-
-            console.log(this);
-            document.querySelector(".product-details__menu--item.active").classList.remove('active');
-            document.querySelector(".product-details__wrap.active").classList.remove('active');
-            
-            this.classList.add('active');
-            descProduct.classList.add('active');
-        }
-    })
-}
-
 function start() {
     openNav();
     closeNav();
-    openMenu();
 }
-// const navContent = document.querySelector('.nav_content')
-// console.log([navContent])

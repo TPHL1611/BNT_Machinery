@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;700;900&family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/responsive.css">
+    
     <title>Chi tiết sản phẩm</title>
 </head>
 <body>
@@ -123,7 +124,7 @@
             <div id="product-details">
                 <div class="container-small container">
                     <div class="row">
-                        <div class="col col-xl-4 col-lg-3 product-details">
+                        <div class="col-12 col-xl-4 col-lg-3 col-md-12 product-details">
                             <ul class="product-details__menu">
                                 <li class="product-details__menu--item active">Tính năng</li>
                                 <li class="product-details__menu--item">Thông số kỹ thuật</li>
@@ -132,9 +133,9 @@
                                 <li class="product-details__menu--item">Hỗ trợ kỹ thuật</li>
                             </ul>
                         </div>
-                        <div class="col col-xl-8 col-lg-9 wrapped">
-                            <div class="col col-xl-12 product-details__wrap">
-                                <ul class="col col-xl-7 product-details__desc">
+                        <div class="col-12 col-xl-8 col-lg-9 col-md-12 wrapped">
+                            <div class="col-12 col-xl-12 col-lg-12 product-details__wrap active">
+                                <ul class="col-12 col-xl-7 col-lg-12 col-md-12 product-details__desc">
                                     <li>Precision and Reliability</li>
                                     <li>Reduction in Rework and Weighing Loss</li>
                                     <li>High - Speed and High - Accuracy Opearation</li>
@@ -145,7 +146,7 @@
                                     <li>Reduction in Rework and Weighing Loss</li>
                                     <li>High - Speed and High - Accuracy Opearation</li>
                                 </ul>
-                                <div class="col col-xl-5 product-details__img">
+                                <div class="col col-xl-5 col-lg-12 col-md-12 product-details__img">
                                     <img src="../assets/img/product-1.png" alt="">
                                 </div>
                             </div>
@@ -191,7 +192,7 @@
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
-                            <div class="product-details__wrap active">
+                            <div class="product-details__wrap">
                                 <div class="product-details__wrap--ky-thuat">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas</p>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas</p>
@@ -209,26 +210,36 @@
             </div>
 
             <div id="product">
-                <div class="container-big">
+                <div class="container-big container">
                     <div class="row product_list">
-                        <div class="col-7 col-xl-3 col-lg-5 col-md-7 col-sm-7 product__item">
-                            <div class="product__item-image"><img src="../assets/img/product-1.png" alt="" class="product-item__img product-item__img--1"></div>
-                            <a href="#">
-                                <div class="trapezoid_btn clip-path">
-                                    <p>Máy xăm</p>
+                        <div class="col-12 col-xl-4 col-lg-10 col-md-12s col-sm-12">
+                            <div class="product__item">
+                                <div class="product__item-image">
+                                    <img src="../assets/img/product-1.png" alt="" class="product-item__img product-item__img--3">
                                 </div>
-                            </a>
-                        </div>
-                        <div class="col-7 col-xl-3 col-lg-5 col-md-7 col-sm-7 product__item">
-                            <div class="product__item-image"><img src="../assets/img/product-2.png" alt="" class="product-item__img product-item__img--2"></div>
-                            <div class="trapezoid_btn clip-path">
-                                <p>Máy tách xương</p>
+                                <div class="trapezoid_btn clip-path">
+                                    <p>Máy khói</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-7 col-xl-3 col-lg-5 col-md-7 col-sm-7 product__item">
-                            <div class="product__item-image"><img src="../assets/img/product-3.png" alt="" class="product-item__img product-item__img--3"></div>
-                            <div class="trapezoid_btn clip-path">
-                                <p>Máy khói</p>
+                        <div class="col-12 col-xl-4 col-lg-10 col-md-12s col-sm-12">
+                            <div class="product__item">
+                                <div class="product__item-image">
+                                    <img src="../assets/img/product-2.png" alt="" class="product-item__img product-item__img--3">
+                                </div>
+                                <div class="trapezoid_btn clip-path">
+                                    <p>Máy khói</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-4 col-lg-10 col-md-12s col-sm-12">
+                            <div class="product__item">
+                                <div class="product__item-image">
+                                    <img src="../assets/img/product-3.png" alt="" class="product-item__img product-item__img--3">
+                                </div>
+                                <div class="trapezoid_btn clip-path">
+                                    <p>Máy khói</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -321,5 +332,24 @@
         </div>
     </div>
 </body>
+<script>
+    const menuProducts = document.querySelectorAll(".product-details__menu--item")
+    console.log(menuProducts);
+    const descProducts = document.querySelectorAll(".product-details__wrap")
+    console.log(descProducts);
+
+    menuProducts.forEach(function(menuProduct, index) {
+        const descProduct = descProducts[index]
+
+        menuProduct.onclick = function() {
+            console.log(this);
+            document.querySelector(".product-details__menu--item.active").classList.remove('active');
+            document.querySelector(".product-details__wrap.active").classList.remove('active');
+            
+            this.classList.add('active');
+            descProduct.classList.add('active');
+        }
+    })
+</script>
 <script src="../main.js"></script>
 </html>
