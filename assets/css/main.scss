@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 $header-height: 5.6rem;
 $white-color: white;
 $nav-height: 10.8rem;
@@ -41,6 +47,19 @@ $primary-color: rgb(31, 37, 51);
 .clip-path-logo {
     clip-path: polygon(0 0, 100% 0, 100% 54%, 0 72%);
     @include background-color($white-color);
+}
+
+html {
+    font-size: 62.5%;  /* = 1rem */
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+#app {
+    background-color: #363c48;
+    overflow: hidden;
 }
 
 #main {
@@ -100,7 +119,7 @@ $primary-color: rgb(31, 37, 51);
 
     .header_item-icon {
         @include font-color(unset, $white-color);
-        line-height: var(--header-height);
+        line-height: $header-height;
         padding: 0 1.6rem;
     }
 
@@ -116,7 +135,7 @@ $primary-color: rgb(31, 37, 51);
     .nav__item {
         @include position();
         z-index: 1;
-        max-height: 10.7rem;
+        max-height: 10.5rem;
 
         &-menu {
             display: none;
@@ -180,7 +199,7 @@ $primary-color: rgb(31, 37, 51);
                     min-width: 20rem;
                     line-height: 2.4rem;
                     opacity: 1;
-                    animation: ease swipeRight 0.5s;
+                    animation: ease fadeIn 1s;
                     box-shadow: 1rem 1rem 10rem rgba(172, 172, 172, 0.685);
                     transform: scale(1);
     
@@ -222,7 +241,8 @@ $primary-color: rgb(31, 37, 51);
                     border-top-left-radius: 2rem;
                     border-bottom-left-radius: 2rem;
                     border: none;
-                    width: 100%
+                    width: 100%;
+                    font-style: italic; 
                 }
             }
 
@@ -267,10 +287,17 @@ $primary-color: rgb(31, 37, 51);
 
         p:first-child {
             @include font-color(7rem, 600, $white-color);
+            animation: swipeLeft ease-in 4s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+
         }
 
         p:last-child {
             @include font-color(4rem, unset, $white-color);
+            animation: swipeRight ease-in 4s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
         }
     }
 
@@ -284,12 +311,19 @@ $primary-color: rgb(31, 37, 51);
             width: 100%;
 
             p:first-child {
-                @include font-color(3.5rem, 600, $white-color);
+                @include font-color(4rem, 600, $white-color);
+                padding-bottom: 3.2rem;
+                animation: swipeLeft ease-in 4s;
+                animation-delay: 2s;
+                animation-iteration-count: infinite;
             }
 
             p:last-child {
-                @include font-color(1.5rem, unset, $white-color);
-                }
+                @include font-color(2rem, unset, $white-color);
+                animation: swipeRight ease-in 4s;
+                animation-delay: 2s;
+                animation-iteration-count: infinite;
+            }
         } 
     }
 
@@ -354,6 +388,11 @@ $primary-color: rgb(31, 37, 51);
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                transition: transform ease 0.5s;
+
+                &:hover {
+                    transform: scale(80%);
+                }
             }
         } 
     }
@@ -366,22 +405,24 @@ $primary-color: rgb(31, 37, 51);
         bottom: -10%;
         text-align: center;
         padding: 25px 10px 30px;
-        transition: all ease 0.5s;
+        transition: transform ease 2s;
+        animation: RLC ease 2s;
+        animation-iteration-count: 5;
 
         &:hover {
             cursor: pointer;
-            bottom: 2px;
+            transform: rotate(360deg);
         }
 
-        p {
-            font-size: 2rem;
-            color: $white-color;
+        a {
+            @include link();
+            @include font-color(2rem, unset, $white-color);
         }
     }
 }
 
 #introduction-policy {
-    background-image: linear-gradient(to bottom, var(--white-color), rgba(255, 254, 254, 0.76));
+    background-image: linear-gradient(to bottom, $white-color, rgba(255, 254, 254, 0.76));
     padding: 6.8rem 0;
 
     #introduction {
@@ -414,10 +455,17 @@ $primary-color: rgb(31, 37, 51);
             padding: 2rem 3rem 3rem;
             margin: 0 auto 6.8rem;
             width: 20%;
+            transition: transform ease 1.5s;
     
-            p {
+            a {
+                @include link();
                 @include font-color(2rem, unset, $white-color);
                 top: 8%;
+            }
+
+            &:hover {
+                transform: rotate(360deg);
+                cursor: pointer;
             }
         }
     }
@@ -447,6 +495,10 @@ $primary-color: rgb(31, 37, 51);
             &-link {
                 @include link();
                 @include font-color(2.4rem, 600, $primary-color);
+
+                &:hover {
+                    opacity: 0.5;
+                }
             }
         }
         
@@ -487,10 +539,14 @@ $primary-color: rgb(31, 37, 51);
             @include background-color($white-color);
             padding: 3.2rem;
             text-align: center;
-
+            
             a {
                 @include link();
                 @include font-color(3rem, 600, $primary-color);
+
+                &:hover {
+                    opacity: 0.5;
+                }
             }
         }
     }
@@ -504,16 +560,32 @@ $primary-color: rgb(31, 37, 51);
 
         &-item {    
 
-            &-image img {
-                width: 100%;
-                height: 20.2rem;
-                object-fit: cover;
+            &-image {
+
+                img {
+                    width: 100%;
+                    height: 20.2rem;
+                    object-fit: cover;
+                    transition: transform ease 0.5s;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
             }
 
             &-content {
                 @include background-color($white-color);
-                @include font-color(1.8rem, 600, $primary-color);
+                @include font-color(1.7rem, 600, $primary-color);
                 padding: 2.4rem 1.6rem;
+                
+                a {
+                    @include link();
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
             }
         }
     }
@@ -529,22 +601,32 @@ $primary-color: rgb(31, 37, 51);
         &--content {
             @include font-color(1.6rem, unset, rgba(101, 105, 114, 0.8));
             line-height: 3rem;
+            animation: swipeLeft ease 2s;
         }
 
         &--header {
             @include font-color(2rem, 600, unset);
             padding: 3.2rem 0;
+            animation: swipeRight ease 2s;
         }
     }
 
     .introduction-page__img {
         padding: 6.4rem 0 3.2rem;
 
-        &-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        }
+        &-item {
+            animation: swipeRight ease 1.3s;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform ease 0.5s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        } 
     }
 }
 
@@ -578,6 +660,10 @@ $primary-color: rgb(31, 37, 51);
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+
+                &:hover {
+
+                }
             }
         }
     }
@@ -630,15 +716,13 @@ $primary-color: rgb(31, 37, 51);
         &--btn {
             @include background-color($primary-color);
             @include position();
-            padding: 5rem;
+            padding: 2rem 6rem;
             text-align: center;
             margin-left: 1.4rem;
 
             p {
-                @include position(absolute);
+                @include flexbox(unset, center, center);
                 @include font-color(1.2rem, unset, $white-color);
-                top: 10%;
-                left: 23%;
             }
         }
     }
@@ -668,6 +752,10 @@ $primary-color: rgb(31, 37, 51);
         @include position();
         @include flexbox(unset, center, center);
 
+        &:hover {
+            filter: brightness(80%);
+        }
+
         &-image {
             width: 100%;
             height: 100%;
@@ -689,6 +777,14 @@ $primary-color: rgb(31, 37, 51);
             text-align: center;
             line-height: 5rem;
             border-radius: 100%;
+            z-index: 1;
+            transition: transform ease 0.3s;
+            
+            &:hover {
+                box-shadow: 2rem 2rem 6rem #ccc;
+                cursor: pointer;
+                transform: scale(1.3);
+            }
         }
     }
 
@@ -740,11 +836,13 @@ $primary-color: rgb(31, 37, 51);
         &--content {
             @include font-color(1.6rem, unset, rgba(101, 105, 114, 0.8));
             line-height: 3rem;
+            animation: swipeLeft ease 1s;
         }
 
         &--header {
             @include font-color(2rem, 600, unset);
             padding: 3.2rem 0;
+            animation: swipeRight ease 1s;
         }
     }
 
@@ -759,6 +857,7 @@ $primary-color: rgb(31, 37, 51);
     }
 
     .new__suggest {
+        animation: fadeIn ease 0.5s;
         
         &-header {
             @include flexbox(unset, center, center);
@@ -796,12 +895,19 @@ $primary-color: rgb(31, 37, 51);
                 &:hover {
                     cursor: pointer;
                 }
+
+                &.active {
+                    @include background-color($primary-color);
+                    @include font-color(2rem, unset, $white-color);
+                    transition: all ease 0.5s;
+                }
             }
         }
         
         &__wrap {
             display: none;
             @include position();
+            animation: fadeIn ease 1s;
     
             &.active {
                 @include flexbox(row, center, center);
@@ -959,6 +1065,8 @@ $primary-color: rgb(31, 37, 51);
                         width: 15%;
                         height: 5px;
                         bottom: -15%;
+                        animation: run ease-in-out 10s;
+                        animation-iteration-count: infinite;
                     }
 
                 }
@@ -1791,5 +1899,52 @@ $primary-color: rgb(31, 37, 51);
         .footer__copyright {
             @include font-color(1.2rem, unset, rgba(255, 255, 255, 0.5));
         }
+    }
+}
+
+@keyframes swipeLeft {
+    0% {
+        transform: translateX(-500%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes swipeRight {
+    0% {
+        transform: translateX(500%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes RLC {
+    0% {
+        transform: translateX(50%);
+        opacity: 0.5;
+    }
+    40% {
+        transform: translateX(-20%);
+        opacity: 1;
+    }
+}
+
+@keyframes run {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

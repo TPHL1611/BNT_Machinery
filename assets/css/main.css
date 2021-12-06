@@ -1,4 +1,10 @@
 @charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .clip-path {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
@@ -6,6 +12,20 @@
 .clip-path-logo {
   clip-path: polygon(0 0, 100% 0, 100% 54%, 0 72%);
   background-color: white;
+}
+
+html {
+  font-size: 62.5%;
+  /* = 1rem */
+  font-family: "Outfit", sans-serif;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+#app {
+  background-color: #363c48;
+  overflow: hidden;
 }
 
 #main {
@@ -71,7 +91,7 @@
   color: white;
   font-weight: white;
   font-size: unset;
-  line-height: var(--header-height);
+  line-height: 5.6rem;
   padding: 0 1.6rem;
 }
 
@@ -81,7 +101,7 @@
 #nav .nav__item {
   position: relative;
   z-index: 1;
-  max-height: 10.7rem;
+  max-height: 10.5rem;
 }
 #nav .nav__item-menu {
   display: none;
@@ -143,7 +163,7 @@
   min-width: 20rem;
   line-height: 2.4rem;
   opacity: 1;
-  animation: ease swipeRight 0.5s;
+  animation: ease fadeIn 1s;
   box-shadow: 1rem 1rem 10rem rgba(172, 172, 172, 0.685);
   transform: scale(1);
 }
@@ -186,6 +206,7 @@
   border-bottom-left-radius: 2rem;
   border: none;
   width: 100%;
+  font-style: italic;
 }
 #nav .nav__item-search--icon {
   background-color: #1f2533;
@@ -231,11 +252,17 @@
   color: white;
   font-weight: 600;
   font-size: 7rem;
+  animation: swipeLeft ease-in 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
 }
 #slider .slider__content p:last-child {
   color: white;
   font-weight: unset;
   font-size: 4rem;
+  animation: swipeRight ease-in 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
 }
 #slider .slider__page-content {
   display: flex;
@@ -251,12 +278,19 @@
 #slider .slider__page-content p:first-child {
   color: white;
   font-weight: 600;
-  font-size: 3.5rem;
+  font-size: 4rem;
+  padding-bottom: 3.2rem;
+  animation: swipeLeft ease-in 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
 }
 #slider .slider__page-content p:last-child {
   color: white;
   font-weight: unset;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  animation: swipeRight ease-in 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
 }
 #slider__page--no-bg {
   display: flex;
@@ -326,6 +360,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform ease 0.5s;
+}
+#product .product__item-image img:hover {
+  transform: scale(80%);
 }
 #product .trapezoid_btn {
   background-color: #1f2533;
@@ -335,19 +373,23 @@
   bottom: -10%;
   text-align: center;
   padding: 25px 10px 30px;
-  transition: all ease 0.5s;
+  transition: transform ease 2s;
+  animation: RLC ease 2s;
+  animation-iteration-count: 5;
 }
 #product .trapezoid_btn:hover {
   cursor: pointer;
-  bottom: 2px;
+  transform: rotate(360deg);
 }
-#product .trapezoid_btn p {
-  font-size: 2rem;
+#product .trapezoid_btn a {
+  text-decoration: none;
   color: white;
+  font-weight: unset;
+  font-size: 2rem;
 }
 
 #introduction-policy {
-  background-image: linear-gradient(to bottom, var(--white-color), rgba(255, 254, 254, 0.76));
+  background-image: linear-gradient(to bottom, white, rgba(255, 254, 254, 0.76));
   padding: 6.8rem 0;
 }
 #introduction-policy #introduction {
@@ -385,12 +427,18 @@
   padding: 2rem 3rem 3rem;
   margin: 0 auto 6.8rem;
   width: 20%;
+  transition: transform ease 1.5s;
 }
-#introduction-policy #introduction .introduction__btn p {
+#introduction-policy #introduction .introduction__btn a {
+  text-decoration: none;
   color: white;
   font-weight: unset;
   font-size: 2rem;
   top: 8%;
+}
+#introduction-policy #introduction .introduction__btn:hover {
+  transform: rotate(360deg);
+  cursor: pointer;
 }
 #introduction-policy #policy .policy__content {
   padding: 5.6rem 4.8rem;
@@ -421,6 +469,9 @@
   color: #1f2533;
   font-weight: 600;
   font-size: 2.4rem;
+}
+#introduction-policy #policy .policy__content-link:hover {
+  opacity: 0.5;
 }
 #introduction-policy #policy .policy__img {
   margin: 0 -12px;
@@ -461,6 +512,9 @@
   font-weight: 600;
   font-size: 3rem;
 }
+#blog .blog__new-btn a:hover {
+  opacity: 0.5;
+}
 #blog .blog__list .row {
   display: flex;
   flex-direction: row;
@@ -471,13 +525,23 @@
   width: 100%;
   height: 20.2rem;
   object-fit: cover;
+  transition: transform ease 0.5s;
+}
+#blog .blog__list-item-image img:hover {
+  transform: scale(1.1);
 }
 #blog .blog__list-item-content {
   background-color: white;
   color: #1f2533;
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   padding: 2.4rem 1.6rem;
+}
+#blog .blog__list-item-content a {
+  text-decoration: none;
+}
+#blog .blog__list-item-content a:hover {
+  opacity: 0.7;
 }
 
 #introduction-page {
@@ -492,20 +556,29 @@
   font-weight: unset;
   font-size: 1.6rem;
   line-height: 3rem;
+  animation: swipeLeft ease 2s;
 }
 #introduction-page .introduction-page__content--header {
   color: unset;
   font-weight: 600;
   font-size: 2rem;
   padding: 3.2rem 0;
+  animation: swipeRight ease 2s;
 }
 #introduction-page .introduction-page__img {
   padding: 6.4rem 0 3.2rem;
+}
+#introduction-page .introduction-page__img-item {
+  animation: swipeRight ease 1.3s;
 }
 #introduction-page .introduction-page__img-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform ease 0.5s;
+}
+#introduction-page .introduction-page__img-item img:hover {
+  transform: scale(1.1);
 }
 
 #image {
@@ -540,7 +613,6 @@
   height: 100%;
   object-fit: cover;
 }
-
 #contact {
   display: flex;
   flex-direction: row;
@@ -592,17 +664,18 @@
 #contact .contact__info--btn {
   background-color: #1f2533;
   position: relative;
-  padding: 5rem;
+  padding: 2rem 6rem;
   text-align: center;
   margin-left: 1.4rem;
 }
 #contact .contact__info--btn p {
-  position: absolute;
+  display: flex;
+  flex-direction: unset;
+  align-items: center;
+  justify-content: center;
   color: white;
   font-weight: unset;
   font-size: 1.2rem;
-  top: 10%;
-  left: 23%;
 }
 #contact .contact__map img {
   width: 100%;
@@ -627,6 +700,9 @@
   align-items: center;
   justify-content: center;
 }
+#video .video-item:hover {
+  filter: brightness(80%);
+}
 #video .video-item-image {
   width: 100%;
   height: 100%;
@@ -648,6 +724,13 @@
   text-align: center;
   line-height: 5rem;
   border-radius: 100%;
+  z-index: 1;
+  transition: transform ease 0.3s;
+}
+#video .video-item .video-icon:hover {
+  box-shadow: 2rem 2rem 6rem #ccc;
+  cursor: pointer;
+  transform: scale(1.3);
 }
 
 #news {
@@ -699,12 +782,14 @@
   font-weight: unset;
   font-size: 1.6rem;
   line-height: 3rem;
+  animation: swipeLeft ease 1s;
 }
 #news .new-page__content--header {
   color: unset;
   font-weight: 600;
   font-size: 2rem;
   padding: 3.2rem 0;
+  animation: swipeRight ease 1s;
 }
 #news .introduction-page__img {
   padding: 6.4rem 0 3.2rem;
@@ -713,6 +798,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+#news .new__suggest {
+  animation: fadeIn ease 0.5s;
 }
 #news .new__suggest-header {
   display: flex;
@@ -750,9 +838,17 @@
 #product-details .product-details__menu li:hover {
   cursor: pointer;
 }
+#product-details .product-details__menu li.active {
+  background-color: #1f2533;
+  color: white;
+  font-weight: unset;
+  font-size: 2rem;
+  transition: all ease 0.5s;
+}
 #product-details .product-details__wrap {
   display: none;
   position: relative;
+  animation: fadeIn ease 1s;
 }
 #product-details .product-details__wrap.active {
   display: flex;
@@ -917,6 +1013,8 @@
   width: 15%;
   height: 5px;
   bottom: -15%;
+  animation: run ease-in-out 10s;
+  animation-iteration-count: infinite;
 }
 #footer .footer__desc-right__header a {
   text-decoration: none;
@@ -1567,6 +1665,48 @@
     color: rgba(255, 255, 255, 0.5);
     font-weight: unset;
     font-size: 1.2rem;
+  }
+}
+@keyframes swipeLeft {
+  0% {
+    transform: translateX(-500%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+}
+@keyframes swipeRight {
+  0% {
+    transform: translateX(500%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+}
+@keyframes RLC {
+  0% {
+    transform: translateX(50%);
+    opacity: 0.5;
+  }
+  40% {
+    transform: translateX(-20%);
+    opacity: 1;
+  }
+}
+@keyframes run {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
